@@ -5,15 +5,15 @@ const app = new Vue ({
     data: {
         newToDo: "",
         toDos: [
-            "learn VueJS",
-            "learn PHP",
-            "learn Laravel",
+            "Learn VueJS",
+            "Learn PHP",
+            "Learn Laravel",
         ],
     },
     methods: {
        addToDo() {
            if (this.newToDo != "") {
-            this.toDos.push(this.newToDo);
+            this.toDos.push(this.newToDo.charAt([0]).toUpperCase() + this.newToDo.slice(1));
             this.newToDo = "";
            } 
        },
