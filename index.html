@@ -31,14 +31,15 @@
             </div>
     
             <div class="todolist">
-                <ul>
-                    <li v-for="todo in toDos">
+                <ul v-if="toDos.length > 0">
+                    <li v-for="(todo, index) in toDos">
                         <span>
                             {{ todo }}
                             <i class="fas fa-times" @click="removeToDo(index)"></i>
                         </span>
                     </li>
                 </ul>
+                <h2 v-else>Non hai compiti da svolgere</h2>
             </div>
         </main>
 

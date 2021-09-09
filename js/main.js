@@ -2,16 +2,13 @@ Vue.config.devtools = true;
 
 const app = new Vue ({
     el: ".container",
-    mounted() {
-        this.startFlip();
-    },
     data: {
         newToDo: "",
         toDos: [
             "learn VueJS",
             "learn PHP",
             "learn Laravel",
-        ]
+        ],
     },
     methods: {
        addToDo() {
@@ -20,5 +17,8 @@ const app = new Vue ({
             this.newToDo = "";
            } 
        },
+       removeToDo(index) {
+           this.toDos.splice(index, 1)
+       }
     }
 });
